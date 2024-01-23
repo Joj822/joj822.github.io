@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music and Countdowns</title>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<style>
+  /* Improved CSS for better styling */
+  body { 
+    font-family: 'Arial', sans-serif; 
+    text-align: center; 
+    background-color: #f0f0f0; 
+    color: #333; 
+  }
+  .music-player, .countdown { 
+    margin: 20px; 
+    background-color: white; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  }
+  .countdown-input, button { 
+    margin: 5px; 
+    padding: 10px; 
+    border-radius: 20px; 
+    border: none; 
+    outline: none; 
+  }
+  button { 
+    background-color: #4CAF50; 
+    color: white; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+  }
+  button:hover { 
+    background-color: #45a049; 
+  }
+</style>
+
+</head>
+<body>
+  <div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">[Embed Code 1]</div>
+      <div class="swiper-slide">[Embed Code 2]</div>
+      <div class="swiper-slide">[Embed Code 3]</div>
+      <!-- ... more slides ... -->
+    </div>
+    <!-- If you want navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <div class="countdown">
+    <h2>Countdown Timer</h2>
+    <input type="date" class="countdown-input" id="countdownDate">
+    <input type="text" class="countdown-input" id="countdownText" placeholder="Event Description">
+    <button onclick="startCountdown()">Start Countdown</button>
+    <p id="countdownDisplay"></p>
+  </div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    // JavaScript for the countdown timer
+    // ... (existing countdown timer script) ...
+
+    // Initialize Swiper
+    var mySwiper = new Swiper('.swiper-container', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>
